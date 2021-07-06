@@ -3,17 +3,17 @@
   --gradient: linear-gradient(
     136deg,
     #008080,
-    #4484ce,
+    #306cb1,
     #1ad7c0,
     #bb6363,
-    #9b59b6
+    #a062b9
   );
 }
 /* Variables */
 
 /* Global */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -72,14 +72,13 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  /* background-color: #2db8f8; */
 }
 .fixed-nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #2db8f8;
+  background-color: #306cb1;
 }
 
 ul {
@@ -98,6 +97,7 @@ ul {
 }
 .hero-container h1 {
   font-size: 5rem;
+  font-weight: 400;
 }
 .hero-container p {
   font-size: 3rem;
