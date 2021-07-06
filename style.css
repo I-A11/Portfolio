@@ -12,6 +12,9 @@
 /* Variables */
 
 /* Global */
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Ubuntu", sans-serif;
   line-height: 1.5;
@@ -78,9 +81,15 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #306cb1;
+  background-color: #20528a;
 }
-
+.logo {
+  margin-left: 20px;
+  color: #fff;
+  font-size: 40px;
+  width: 70px;
+  height: auto;
+}
 ul {
   display: flex;
   width: 500px;
@@ -100,7 +109,7 @@ ul {
   font-weight: 400;
 }
 .hero-container p {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .btn {
