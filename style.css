@@ -43,6 +43,7 @@ section {
   background-color: #ffffff;
 }
 
+/* hero section */
 @keyframes bg-animation {
   0% {
     background-position: left;
@@ -65,6 +66,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  margin-right: 20px;
   background-color: transparent;
   cursor: pointer;
   position: sticky;
@@ -72,16 +74,15 @@ nav {
 }
 .fixed-hero-nav {
   position: fixed;
-  top: 0;
-  left: 0;
+  margin-right: 20px;
   width: 100%;
 }
 .fixed-nav {
   position: fixed;
-  top: 0;
-  left: 0;
+  margin-right: 20px;
+  background-color: #eaecefcf;
+  color: #a9a9a9;
   width: 100%;
-  background-color: #20528a;
 }
 .logo,
 .logo a {
@@ -93,6 +94,9 @@ nav {
   transition-duration: 1000ms;
 }
 
+.fixed-logo {
+  color: #a9a9a9;
+}
 .logo:hover {
   transform: rotate(-180deg);
 }
@@ -154,6 +158,34 @@ ul {
 .btn:hover {
   background: #fff;
   color: #000;
+}
+
+/* about me section */
+.about-me {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px;
+  margin-top: 80px;
+}
+
+.headshot-container {
+  flex-basis: 1;
+}
+.headshot-container img {
+  width: 300px;
+  height: auto;
+}
+.information {
+  text-align: center;
+  flex-basis: 50%;
+}
+.information h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+.information p {
+  font-size: 1.2rem;
 }
 footer {
   background-color: #000;

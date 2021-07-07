@@ -1,5 +1,6 @@
 const nav = document.querySelector(".nav");
 const hero = document.querySelector(".hero");
+const logo = document.querySelector(".fa-robot");
 // navbar scroll
 window.addEventListener("scroll", () => {
   const scrollHeight = window.pageYOffset;
@@ -8,10 +9,13 @@ window.addEventListener("scroll", () => {
 
   if (scrollHeight > navHeight) {
     nav.classList.add("fixed-hero-nav");
+    logo.style.color = "white";
   }
   if (scrollHeight > heroHeight) {
     nav.classList.add("fixed-nav");
+    logo.style.color = "#a9a9a9";
   } else {
     nav.classList.remove("fixed-nav");
+    logo.style.color = "white";
   }
 });
