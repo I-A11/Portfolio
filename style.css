@@ -83,13 +83,20 @@ nav {
   width: 100%;
   background-color: #20528a;
 }
-.logo {
+.logo,
+.logo a {
   margin-left: 20px;
   color: #fff;
   font-size: 40px;
   width: 70px;
   height: auto;
+  transition-duration: 1000ms;
 }
+
+.logo:hover {
+  transform: rotate(-180deg);
+}
+
 ul {
   display: flex;
   width: 500px;
@@ -110,6 +117,24 @@ ul {
 }
 .hero-container p {
   font-size: 2rem;
+}
+
+.social a {
+  text-decoration: none;
+  color: #fff;
+}
+.fa-github,
+.fa-linkedin {
+  font-size: 50px;
+  padding: 20px 10px;
+}
+
+.fa-github:hover {
+  color: #000;
+}
+
+.fa-linkedin:hover {
+  color: #000;
 }
 
 .btn {
