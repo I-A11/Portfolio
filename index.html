@@ -22,18 +22,39 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <section class="hero">
-      <nav class="nav">
-        <div class="logo">
-          <a href="./index.html"><i class="fas fa-robot"> </i></a>
+    <section class="hero" id="home">
+      <!--navbar  -->
+      <nav id="nav">
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <a class="logo" href="./index.html"
+              ><i class="fas fa-robot"> </i
+            ></a>
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#about" class="scroll-link">About Me</a>
+              </li>
+              <li>
+                <a href="#projects" class="scroll-link">Projects</a>
+              </li>
+              <li>
+                <a href="#skills" class="scroll-link">Skills</a>
+              </li>
+              <li>
+                <a href="#contact" class="scroll-link">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul>
-          <li>About me</li>
-          <li>Projects</li>
-          <li>Skills</li>
-          <li>Contact</li>
-        </ul>
       </nav>
+
       <div class="hero-container">
         <h1>Islam Aboamh</h1>
         <p>Front-End Web Developer</p>
@@ -45,10 +66,10 @@
             ><i class="fab fa-linkedin"></i
           ></a>
         </div>
-        <button class="btn">About Me</button>
+        <a href="#about" class="scroll-link btn">About Me</a>
       </div>
     </section>
-    <section class="about-me">
+    <section class="about-me" id="about">
       <div class="headshot-container">
         <img src="./images/islam.jpg" alt="islam personal image" />
       </div>
@@ -64,8 +85,33 @@
         </p>
       </div>
     </section>
-    <section></section>
-    <footer></footer>
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-2"></div>
+        </div>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-2"></div>
+        </div>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-2"></div>
+        </div>
+      </div>
+    </section>
+    <section class="skills" id="skills">
+      <h2>skills</h2>
+    </section>
+    <footer class="contact" id="contact">
+      <h2>contact</h2>
+    </footer>
+    <!--bck to top  -->
+    <a href="#home" class="scroll-link top-link">
+      <i class="fas fa-arrow-up"></i>
+    </a>
     <script src="./app.js"></script>
   </body>
 </html>

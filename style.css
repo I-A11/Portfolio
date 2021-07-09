@@ -8,6 +8,7 @@
     #bb6363,
     #a062b9
   );
+  --transition: all 0.3s linear;
 }
 /* Variables */
 
@@ -38,11 +39,6 @@ h1 {
   padding: 0;
 }
 
-section {
-  height: 500px;
-  background-color: #ffffff;
-}
-
 /* hero section */
 @keyframes bg-animation {
   0% {
@@ -61,31 +57,42 @@ section {
   font-size: 1.8rem;
   color: #fff;
 }
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  margin-right: 20px;
-  background-color: transparent;
+.nav {
+  background: #fff;
+  padding: 1rem 1.5rem;
   cursor: pointer;
-  position: sticky;
-  top: 0;
 }
-.fixed-hero-nav {
-  position: fixed;
-  margin-right: 20px;
-  width: 100%;
-}
+
+/* fixed nav */
 .fixed-nav {
   position: fixed;
-  margin-right: 20px;
-  background-color: #eaecefcf;
-  color: #a9a9a9;
+  top: 0;
+  left: 0;
   width: 100%;
+  background-color: #bdb8b8;
 }
-.logo,
-.logo a {
+.fixed-nav .links a {
+  color: #fff;
+}
+/* .fixed-nav .links-container {
+  height: auto !important;
+} */
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-toggle {
+  display: block;
+  background: transparent;
+  font-size: 2.2rem;
+  color: #fff;
+  border: none;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.logo {
   margin-left: 20px;
   color: #fff;
   font-size: 40px;
@@ -94,19 +101,70 @@ nav {
   transition-duration: 1000ms;
 }
 
-.fixed-logo {
+/* .fixed-logo {
   color: #a9a9a9;
-}
+} */
 .logo:hover {
   transform: rotate(-180deg);
 }
 
-ul {
-  display: flex;
-  width: 500px;
-  justify-content: space-around;
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.show-links {
+  height: 200px;
+}
+.links a {
+  background: transparent;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-left: 10px;
+  text-transform: capitalize;
+  display: block;
+  transition: var(--transition);
+  font-weight: bold;
+  padding: 0.75rem 0;
+}
+@media screen and (min-width: 800px) {
+  .nav {
+    background: transparent;
+  }
+  .nav-center {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links-container {
+    height: auto !important;
+  }
+  .links {
+    display: flex;
+  }
+  .links a {
+    background: transparent;
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    display: block;
+    transition: var(--transition);
+    margin: 0 1rem;
+    font-weight: bold;
+    padding: 0;
+  }
 }
 
+/* hero container */
 .hero-container {
   display: flex;
   flex-direction: column;
@@ -146,6 +204,7 @@ ul {
   height: 50px;
   background: transparent;
   margin-top: 20px;
+  padding-top: 5px;
   border-radius: 10px;
   color: #fff;
   font-size: 1.5rem;
@@ -159,35 +218,107 @@ ul {
   background: #fff;
   color: #000;
 }
+/* hero section mobile view */
 
 /* about me section */
 .about-me {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding: 60px;
-  margin-top: 80px;
+  padding-top: 40px;
+  height: 500px;
+  color: #686161;
+  background: #e7e0e0;
 }
-
 .headshot-container {
-  flex-basis: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .headshot-container img {
-  width: 300px;
+  width: 250px;
   height: auto;
+  border-radius: 40%;
+  margin-top: 40px;
+  margin-right: 50px;
 }
 .information {
   text-align: center;
-  flex-basis: 50%;
+  flex-basis: 40%;
 }
 .information h2 {
   font-size: 3rem;
   font-weight: 400;
+  margin-bottom: 10px;
 }
 .information p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  line-height: 2.2rem;
 }
+
+/* Projects section */
+.projects {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col-2 {
+  height: 500px;
+  border: 1px solid black;
+  margin: 20px;
+  flex-basis: 30%;
+}
+
+/* skills section */
+.skills {
+  height: 400px;
+  background-color: #fff;
+  text-align: center;
+}
+/* footer section */
 footer {
   background-color: #000;
+  color: #fff;
+  text-align: center;
   height: 400px;
+}
+.top-link {
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background: #ff0844;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+  color: #fff;
+  animation: bounce 2s ease-in-out infinite;
+  visibility: hidden;
+  z-index: 100;
+}
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
