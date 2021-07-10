@@ -307,6 +307,12 @@ h1 {
   flex-direction: column;
   text-align: center;
 }
+.projects h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 20px 0;
+  color: #686161;
+}
 
 .row {
   display: flex;
@@ -316,12 +322,83 @@ h1 {
 }
 
 .col-2 {
-  height: 500px;
-  border: 1px solid black;
-  margin: 20px;
-  flex-basis: 30%;
+  height: 400px;
+  width: auto;
+  flex-basis: 32%;
+  margin: 30px;
+  padding: 40px 20px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.5s;
+  border-radius: 5%;
 }
 
+.col-2:hover {
+  transform: translateY(-10px);
+}
+
+.col-2 h3 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #17cece;
+}
+
+.col-2 img {
+  width: 350px;
+  height: 180px;
+  margin-top: 15px;
+}
+.project-button {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  text-align: center;
+}
+.project-btn {
+  width: 180px;
+  height: 200px;
+  margin: 0 10px;
+  background: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  color: #686161;
+  font-size: 1rem;
+  border: 1px solid #686161;
+  cursor: pointer;
+}
+.project-btn:hover {
+  background: #17cece;
+  color: #000;
+}
+
+/* Projects section mobile view */
+@media screen and (max-width: 400px) {
+  .projects h2 {
+    font-size: 2rem;
+  }
+
+  .col-2 img {
+    width: 250px;
+    height: 180px;
+    margin-top: 15px;
+  }
+  .project-button {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+  }
+  .project-btn {
+    width: 90px;
+    height: 120px;
+    margin: 0 10px;
+    background: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    color: #686161;
+    font-size: 0.75rem;
+  }
+}
 /* skills section */
 .skills {
   height: 400px;
