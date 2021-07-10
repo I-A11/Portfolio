@@ -39,24 +39,7 @@ h1 {
   padding: 0;
 }
 
-/* hero section */
-@keyframes bg-animation {
-  0% {
-    background-position: left;
-  }
-  100% {
-    background-position: right;
-  }
-}
-
-.hero {
-  height: 100vh;
-  background-image: var(--gradient);
-  background-size: 1200%;
-  animation: bg-animation 90s infinite alternate;
-  font-size: 1.8rem;
-  color: #fff;
-}
+/* navbar section */
 .nav {
   background: #fff;
   padding: 1rem 1.5rem;
@@ -69,14 +52,12 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #bdb8b8;
+  background-color: #17cece;
 }
 .fixed-nav .links a {
   color: #fff;
 }
-/* .fixed-nav .links-container {
-  height: auto !important;
-} */
+
 .nav-header {
   display: flex;
   align-items: center;
@@ -164,6 +145,25 @@ h1 {
   }
 }
 
+/* hero section */
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+.hero {
+  height: 100vh;
+  background-image: var(--gradient);
+  background-size: 1200%;
+  animation: bg-animation 90s infinite alternate;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
 /* hero container */
 .hero-container {
   display: flex;
@@ -219,7 +219,14 @@ h1 {
   color: #000;
 }
 /* hero section mobile view */
-
+@media screen and (max-width: 560px) {
+  .hero-container h1 {
+    font-size: 3.5rem;
+  }
+  .hero-container p {
+    font-size: 1.5rem;
+  }
+}
 /* about me section */
 .about-me {
   display: flex;
@@ -244,7 +251,7 @@ h1 {
 }
 .information {
   text-align: center;
-  flex-basis: 40%;
+  flex-basis: 50%;
 }
 .information h2 {
   font-size: 3rem;
@@ -254,6 +261,44 @@ h1 {
 .information p {
   font-size: 1.3rem;
   line-height: 2.2rem;
+}
+
+/* about me section tablet view */
+@media screen and (max-width: 1180px) {
+  .headshot-container img {
+    display: none;
+  }
+  .information {
+    flex-basis: 80%;
+  }
+}
+
+/* about me section mobile view */
+@media screen and (max-width: 600px) {
+  .headshot-container img {
+    display: none;
+  }
+  .information {
+    flex-basis: 100%;
+  }
+  .information p {
+    font-size: 1rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .headshot-container img {
+    display: none;
+  }
+  .information {
+    flex-basis: 100%;
+  }
+  .information h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
 }
 
 /* Projects section */
@@ -295,7 +340,7 @@ footer {
   position: fixed;
   bottom: 3rem;
   right: 3rem;
-  background: #ff0844;
+  background: #17cece;
   width: 2rem;
   height: 2rem;
   display: grid;
