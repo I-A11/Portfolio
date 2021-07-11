@@ -486,6 +486,13 @@ h1 {
 .fa-git-alt {
   color: #ec4848;
 }
+
+.js-img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
 .agile {
   width: 60px;
   height: auto;
@@ -507,6 +514,11 @@ h1 {
     margin-bottom: 15px;
   }
 
+  .js-img {
+    width: 40px;
+    height: auto;
+  }
+
   .agile {
     width: 50px;
     height: auto;
@@ -514,10 +526,32 @@ h1 {
 }
 /* footer section */
 footer {
-  background-color: #000;
+  background-color: #575454;
   color: #fff;
   text-align: center;
-  height: 400px;
+  height: 300px;
+}
+
+footer h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  padding-top: 10px;
+  color: #17cece;
+}
+
+footer p {
+  font-size: 1.3rem;
+  margin: 10px;
+}
+
+footer a {
+  font-size: 1.5rem;
+  color: #17cece;
+  margin: 15px;
+}
+
+.open-source {
+  font-size: 1rem;
 }
 
 .top-link {
@@ -551,5 +585,20 @@ footer {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+/* footer section mobile view  */
+@media screen and (max-width: 650px) {
+  footer h2 {
+    font-size: 2rem;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+
+  footer a {
+    font-size: 1.2rem;
   }
 }
